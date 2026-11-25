@@ -1,0 +1,25 @@
+{
+  "name": "treasure-hunt-game",
+  "version": "1.0.0",
+  "description": "Deterministic 3x3 treasure-hunt game (TypeScript, Node, browser DOM)",
+  "type": "module",
+  "private": true,
+  "files": [
+    "dist",
+    "public",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test \"tests/*.test.mjs\"",
+    "start": "npm run build && node dist/server/server.js",
+    "serve": "node dist/server/server.js",
+    "package": "npm run build && node scripts/package.mjs",
+    "verify:release": "node scripts/verify-release.mjs",
+    "release": "npm test && npm run package && npm run verify:release"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2"
+  }
+}

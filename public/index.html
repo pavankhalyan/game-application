@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Treasure Hunt</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main>
+    <h1>Treasure Hunt</h1>
+    <p id="message" role="status" aria-live="polite">Loading…</p>
+
+    <section aria-labelledby="h-status">
+      <h2 id="h-status">Status</h2>
+      <dl>
+        <dt>API</dt><dd id="api-status">—</dd>
+        <dt>Telemetry</dt><dd id="telemetry-status">—</dd>
+        <dt>Events stored locally</dt><dd id="event-count">0</dd>
+        <dt>Run ID</dt><dd id="run-id">—</dd>
+      </dl>
+      <button id="btn-start" type="button" disabled>Start / Restart</button>
+      <button id="btn-reload" type="button">Reload game data</button>
+    </section>
+
+    <section aria-labelledby="h-game">
+      <h2 id="h-game">Game</h2>
+      <div id="board" class="board" role="img" aria-label="Game board"></div>
+      <dl>
+        <dt>Game state</dt><dd id="status">not started</dd>
+        <dt>Position</dt><dd id="position">—</dd>
+        <dt>Moves remaining</dt><dd id="moves">—</dd>
+        <dt>Score</dt><dd id="score">—</dd>
+        <dt>Collected treasure</dt><dd id="treasure">—</dd>
+      </dl>
+      <div class="pad">
+        <button id="btn-north" type="button" disabled>Move North</button>
+        <button id="btn-west" type="button" disabled>Move West</button>
+        <button id="btn-east" type="button" disabled>Move East</button>
+        <button id="btn-south" type="button" disabled>Move South</button>
+      </div>
+    </section>
+
+    <section aria-labelledby="h-hint">
+      <h2 id="h-hint">Hint (advisory only)</h2>
+      <button id="btn-hint" type="button" disabled>Hint</button>
+      <dl>
+        <dt>Hint state</dt><dd id="hint-state" aria-live="polite">No hint requested</dd>
+        <dt>Allowed actions</dt><dd id="hint-allowed">—</dd>
+        <dt>Why permitted</dt><dd id="hint-permission">—</dd>
+        <dt>Recommended action</dt><dd id="hint-recommended">—</dd>
+        <dt>Explanation</dt><dd id="hint-explanation">—</dd>
+        <dt>Source</dt><dd id="hint-source">—</dd>
+        <dt>Request ID</dt><dd id="hint-request-id">—</dd>
+      </dl>
+    </section>
+  </main>
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

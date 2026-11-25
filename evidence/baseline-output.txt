@@ -1,0 +1,9 @@
+
+> treasure-hunt-game@1.0.0 test
+> npm run build && node --test "tests/*.test.mjs"
+
+
+> treasure-hunt-game@1.0.0 build
+> tsc -p tsconfig.json
+
+error TS5058: The specified path does not exist: 'C:/Users/0113kp/Game-based application/tsconfig.json'.
